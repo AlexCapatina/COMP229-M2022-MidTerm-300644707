@@ -13,4 +13,5 @@ router.get('/', (req, res, next) => {
         books: ''
     });
 });
+module.exports = router;
 //# sourceMappingURL=index.js.map

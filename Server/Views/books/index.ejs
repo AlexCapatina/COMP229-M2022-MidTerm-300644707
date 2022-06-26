@@ -8,7 +8,7 @@
           <!-- ------------------------ -->
           <!-- FIX THE ADD BUTTON BELOW -->
           <!-- ------------------------ -->
-          <a href="/add" id="addBtn" class="btn btn-primary"><i class="fa fa-plus"></i> Add a book</a>
+          <a href="/books/add" class="btn btn-primary"><i class="fa fa-plus"></i> Add a book</a>
           <br>
           <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover">
@@ -30,14 +30,13 @@
                   <td class="text-center">$<%= books[count].Price %></td>
                   <td class="text-center"><%= books[count].Author %></td>
                   <td class="text-center"><%= books[count].Genre %></td>                  
-                  <td class="text-center"><a href="/edit/<%= books[count]._id%>" class="btn btn-primary btn-sm edit"><i class="fa-solid fa-file-pen"></i> Edit</a>
+                  <td class="text-center"><a href="/books/edit/<%= books[count]._id %>" class="btn btn-primary btn-sm edit"><i class="fa-solid fa-file-pen"></i> Edit</a>
                     <!-- ------------------------ -->
                     <!-- ADD the EDIT BUTTON HERE -->
                     <!-- ------------------------ -->
                   </td>
-
-                  <td class="text-center">
-                    <td class="text-center"><a href="/delete/<%= books[count]._id%>" class="btn btn-danger btn-sm edit"><i class="fa-solid fa-eraser"></i> Delete</a>
+                  
+                    <td class="text-center"><a href="/books/delete/<%= books[count]._id %>" class="btn btn-danger btn-sm edit"><i class="fa-solid fa-eraser"></i> Delete</a>
                     <!-- ------------------------ -->
                     <!-- ADD the DELETE BUTTON HERE -->
                     <!-- ------------------------ -->
