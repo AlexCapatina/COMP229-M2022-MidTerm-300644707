@@ -27,7 +27,8 @@
                 placeholder="Book Genre" name="genre" value="<%= books.Genre %>"  required>
               </div>
               
-              <% if (title == 'Edit') { %>
+              <!--Added a function that would swap between Add and Submit buttons, depending on whether you Add or Edit-->
+              <% if (title == 'edit') { %>
                 <button id="editButton" type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
                 <% } else {%>
                 <button id="addButton" type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Add</button>

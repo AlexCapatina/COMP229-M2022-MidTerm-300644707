@@ -33,9 +33,7 @@ router.get('/add', (req, res, next) =>
       page: 'books',
       books: ''
      });  
-    /*****************
-     * ADD CODE HERE *
-     *****************/  
+   
 });
 
 // POST process the Book Details page and create a new Book - CREATE
@@ -45,12 +43,11 @@ router.post('/add', (req, res, next) =>
   ({
     "Author": req.body.author,    
     "Genre": req.body.genre,
+    "Description": req.body.Description,
     "Price": req.body.price,
     "Title": req.body.title
   });
-    /*****************
-     * ADD CODE HERE *
-     *****************/
+    
 book.create(newBook, function(err, Book)
   {
     if (err) {
@@ -83,9 +80,7 @@ router.get('/edit/:id', (req, res, next) =>
     }
   }
   )
-    /*****************
-     * ADD CODE HERE *
-     *****************/
+  
 });
 
 // POST - process the information passed from the details form and update the document
@@ -109,11 +104,7 @@ router.post('/edit/:id', (req, res, next) => {
     }
     //return to main page after successful update
     res.redirect('/books');
-  })
-    /*****************
-     * ADD CODE HERE *
-     *****************/
-
+  }) 
 });
 
 // GET - process the delete by user id
@@ -125,12 +116,9 @@ router.get('/delete/:id', (req, res, next) => {
         console.log(err);
         res.end(err);
       }else{
-        res.redirect('books/index')
+        res.redirect('/books')
       }
-    })
-    /*****************
-     * ADD CODE HERE *
-     *****************/
+    })    
 });
 
 

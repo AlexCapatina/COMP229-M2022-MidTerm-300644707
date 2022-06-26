@@ -5,9 +5,7 @@
       <div class="row">
         <div class="col-md-offset-1 col-md-10">
           <h3>Favourite Books List </h3>
-          <!-- ------------------------ -->
-          <!-- FIX THE ADD BUTTON BELOW -->
-          <!-- ------------------------ -->
+         <!--Added href link and fixed the button-->
           <a href="/books/add" class="btn btn-primary"><i class="fa fa-plus"></i> Add a book</a>
           <br>
           <div class="table-responsive">
@@ -23,23 +21,23 @@
                 </tr>
                 </thead>
                 <tbody>
-                <!-- Template Row -->
+                <!-- Template Row -->               
+                
                 <% for (let count = 0; count < books.length; count++) { %>
                 <tr>
                   <td><%= books[count].Title %></td>
                   <td class="text-center">$<%= books[count].Price %></td>
                   <td class="text-center"><%= books[count].Author %></td>
                   <td class="text-center"><%= books[count].Genre %></td>                  
+                  
+                  
+                  <!--Added Edit and Delete buttons for each row-->                    
                   <td class="text-center"><a href="/books/edit/<%= books[count]._id %>" class="btn btn-primary btn-sm edit"><i class="fa-solid fa-file-pen"></i> Edit</a>
-                    <!-- ------------------------ -->
-                    <!-- ADD the EDIT BUTTON HERE -->
-                    <!-- ------------------------ -->
+                    
                   </td>
                   
                     <td class="text-center"><a href="/books/delete/<%= books[count]._id %>" class="btn btn-danger btn-sm edit"><i class="fa-solid fa-eraser"></i> Delete</a>
-                    <!-- ------------------------ -->
-                    <!-- ADD the DELETE BUTTON HERE -->
-                    <!-- ------------------------ -->
+                    
                   </td>
                 </tr>
                 <% } %>

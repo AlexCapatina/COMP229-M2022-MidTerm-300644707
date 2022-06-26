@@ -32,6 +32,7 @@ router.post('/add', (req, res, next) => {
     let newBook = new books_1.default({
         "Author": req.body.author,
         "Genre": req.body.genre,
+        "Description": req.body.Description,
         "Price": req.body.price,
         "Title": req.body.title
     });
@@ -85,7 +86,7 @@ router.get('/delete/:id', (req, res, next) => {
             res.end(err);
         }
         else {
-            res.redirect('books/index');
+            res.redirect('/books');
         }
     });
 });

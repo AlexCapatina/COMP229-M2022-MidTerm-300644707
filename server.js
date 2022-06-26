@@ -1,3 +1,8 @@
+/*
+COMP229-M2022-MidTerm-300644707
+Alexandru Capatina, 300644707
+Typescript
+*/
 "use strict";
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
